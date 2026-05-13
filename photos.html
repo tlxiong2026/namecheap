@@ -93,7 +93,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             margin: 50px 0;
         }
@@ -144,6 +144,16 @@
             margin-bottom: 20px;
         }
 
+        .project-description a {
+            color: #00ddff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .project-description a:hover {
+            color: #00ff88;
+        }
+
         .project-tech {
             display: flex;
             flex-wrap: wrap;
@@ -158,30 +168,6 @@
             border: 2px solid #00ff88;
         }
 
-        .tech-tag {
-            background: rgba(0, 255, 136, 0.2);
-            border: 1px solid #00ff88;
-            padding: 5px 15px;
-            border-radius: 3px;
-            font-size: 0.9em;
-            color: #00ff88;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .project-link {
-            padding: 10px 20px;
-            background: transparent;
-            border: 2px solid #00ff88;
-            color: #00ff88;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-family: 'Courier New', monospace;
-        }
-
         footer {
             text-align: center;
             padding: 40px;
@@ -191,20 +177,7 @@
             font-family: 'Courier New', monospace;
         }
 
-        .project-link:hover {
-            background: #00ff88;
-            color: #0a0e27;
-            box-shadow: 0 0 20px #00ff88;
-        }
-
         @media (max-width: 768px) {
-            h1 { font-size: 2.5em; }
-            .projects-grid { grid-template-columns: 1fr; }
-            .back-btn { top: 20px; left: 20px; }
-        }
-
-        @media (max-width: 768px) {
-        
             body {
                 padding: 0 10px;
             }
@@ -226,7 +199,7 @@
             }
         
             .projects-grid {
-                grid-template-columns: 1fr; /* Force single column */
+                grid-template-columns: 1fr;
                 gap: 25px;
             }
         
@@ -246,11 +219,9 @@
             .project-tech {
                 gap: 8px;
             }
-        
+
             .project-tech img {
-                width: 100%;        /* Full width images */
-                max-height: 250px;  /* Prevent overly tall images */
-                object-fit: cover;
+                width: 100%;
             }
         
             footer {
@@ -260,9 +231,7 @@
             }
         }
         
-        
         @media (max-width: 480px) {
-        
             h1 {
                 font-size: 1.8em;
             }
@@ -314,6 +283,7 @@
                     <img src="images/Lacasse_A1_07.jpg" alt="Photo3">
                </div>
            </div>
+
             <div class="project-card">
                <h3 class="project-title">Street Photography</h3>
                <p class="project-description">
@@ -325,13 +295,12 @@
                     <img src="images/Street_jpg_4.jpg" alt="Photo3">
                </div>
            </div>
-
         </div>
     </div>
 
     <footer>
-            <p>[ CREATED & DESIGNED BY TOUZONG XIONG © 2026 ]</p>
-        </footer>
+        <p>[ CREATED & DESIGNED BY TOUZONG XIONG © 2026 ]</p>
+    </footer>
 
     <script>
         // Create animated stars
